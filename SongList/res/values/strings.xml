@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Java1Application</string>
+    <string name="action_settings">Settings</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="show_song_info">Show Song Info</string>
+    <string name="listenNow">Listen Now</string>
+    <string name="networkConn"></string>
+    <string name="jsonView"></string>
+    <string-array name="songArray">
+    	<item>Spaced Out</item>
+    	<item>You Know</item>
+    	<item>We Need A Savior</item>
+    	<item>Into The Darkness</item>
+    	<item>The Outer Rim</item>
+    	<item>The March</item>
+    	<item>I Am With You</item>
+    </string-array>
+
+</resources>
