@@ -23,6 +23,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">center</item>
         <item name="android:background">@android:color/holo_blue_bright</item> 
+        <item name="android:textColor">@android:color/white</item>
     </style>
     
      <style name="textStyle">
@@ -31,7 +32,7 @@
         <item name="android:layout_height">wrap_content</item>
         <item name="android:layout_gravity">left</item>
         <item name="android:textSize" >12sp</item>
-        <item name="android:textColor">@android:color/holo_blue_dark</item> 
+        <item name="android:textColor">@android:color/holo_green_dark</item> 
     </style>
     
      <style name="webStyle">

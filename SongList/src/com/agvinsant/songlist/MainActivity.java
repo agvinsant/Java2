@@ -86,7 +86,7 @@ public class MainActivity extends Activity {
 				String arName = artistNameList.get(pos).toString();
 				String alName = albumNameList.get(pos).toString();  
 				String tSite = trackSiteList.get(pos).toString();
-				//String tPreview = trackPreviewList.get(pos);
+				
 
 	
 				jsonView.setText("Artist Name:   " +arName+ "\r\n"+ "\r\n"+"Album Name:   "+alName+ "\r\n" +"\r\n"+ "Song Website:   " +tSite);
@@ -250,6 +250,7 @@ public class MainActivity extends Activity {
 						albumNameList.add(albumName);  
 						trackSiteList.add(trackSite);
 						trackPreviewList.add(trackPreview);
+						
 					}
 		
 				} catch (JSONException e) {
