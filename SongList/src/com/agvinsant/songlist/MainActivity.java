@@ -23,7 +23,9 @@ import com.agvinsant.lib.WebClass;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.res.Resources;
 import android.util.Log;
 import android.view.Menu;
@@ -132,6 +134,18 @@ public class MainActivity extends Activity {
 				}
 				else{
 						connectedView.setText(""+WebClass.getConnectionType(context)+"\n");
+						
+						// alert box shows if there is not an internet connection. Informs user that stored data will be used
+						AlertDialog.Builder builder = new AlertDialog.Builder(this);
+						builder.setMessage("No Internet Connection Detected. Stored data will be used.")
+						       .setCancelable(false)
+						       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
+						           public void onClick(DialogInterface dialog, int id) {
+						                dialog.cancel();
+						           }
+						       });
+						AlertDialog alert = builder.create();
+						alert.show();
 				}
 
 				
