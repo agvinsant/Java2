@@ -55,12 +55,13 @@ public class MainActivity extends Activity {
 	String trackSite;
 	public static URL finalURL;
 
-	
+	// array lists 
 	ArrayList<String> artistNameList = new ArrayList<String>();
 	ArrayList<String> albumNameList = new ArrayList<String>();
 	ArrayList<String> trackSiteList = new ArrayList<String>();
 	ArrayList<String> trackPreviewList = new ArrayList<String>();
 	
+	//initial connection
 	Boolean connected = false;
 	
 	
@@ -89,15 +90,13 @@ public class MainActivity extends Activity {
 				String alName = albumNameList.get(pos).toString();  
 				String tSite = trackSiteList.get(pos).toString();
 				
-
-	
+				// setting results text in the view
 				jsonView.setText("Artist Name:   " +arName+ "\r\n"+ "\r\n"+"Album Name:   "+alName+ "\r\n" +"\r\n"+ "Song Website:   " +tSite);
 				
+				// importing image from resourses
 				ImageView image = (ImageView) findViewById(R.id.imageView);
 				image.setImageResource(R.drawable.logicalthinkingcoverfront);
-				
-				
-				
+					
 			}
 
 		});
@@ -110,6 +109,7 @@ public class MainActivity extends Activity {
 			@Override
 			public void onClick(View v) {
 				
+				// setting the web view for the Listen Now button
 				WebView webView = (WebView) findViewById(R.id.webView);
 				webView.loadUrl("https://soundcloud.com/groove-logic/sets/logical-thinking-ep-teaser/s-7KILb");
 			}
@@ -133,11 +133,12 @@ public class MainActivity extends Activity {
 					getSongInfo();
 				}
 				else{
-						connectedView.setText(""+WebClass.getConnectionType(context)+"\n");
+						// setting the connection view text to show the connection type
+						connectedView.setText("NO CONNECTION"+WebClass.getConnectionType(context)+"\n");
 						
 						// alert box shows if there is not an internet connection. Informs user that stored data will be used
 						AlertDialog.Builder builder = new AlertDialog.Builder(this);
-						builder.setMessage("No Internet Connection Detected. Stored data will be used.")
+						builder.setMessage("No Internet Connection Detected. Stored data will be used. Check your connection to use internet data.")
 						       .setCancelable(false)
 						       .setPositiveButton("OK", new DialogInterface.OnClickListener() {
 						           public void onClick(DialogInterface dialog, int id) {
@@ -241,8 +242,6 @@ public class MainActivity extends Activity {
 	try {
 					
 					Log.i("TRYING JSON", "trying json");
-					//JSONObject json = new JSONObject(result);
-					//JSONObject results = jsonObject.getJSONObject("results");
 					
 					JSONObject mainJSON = new JSONObject(result);
 		
